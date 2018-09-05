@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+	<!-- vue-app是根容器 -->
+	<div id="vue-app">
+	<!-- 	第一部分
+	<h1>{{ greet('afternoon') }}</h1>
+		<p>name :{{name}}</p>
+		<p>job :{{job}}</p>
+		<a v-bind:href="website">百度一下</a>
+		<input type="text" name="" v-bind:value="job">
+		<p v-html="websiteTag"></p> -->
+
+		<!--  -->
+<!-- 		<h1>Events</h1>
+		<button @click.once="add(1)">涨一岁</button>
+		<button v-on:click="subtract(1)">少一岁</button>
+
+		<button @dblclick="add(10)">涨十岁</button>
+		<button v-on:dblclick="subtract(10)">少十岁</button>
+
+
+		<p> My age is {{ age}}</p>
+
+		<div id="canvas" v-on:mousemove="updateXY">
+			{{x}}, {{y}} -<span v-on:mousemove.stop=""> StopMoving</span>
+		</div>
+		<a v-on:click.prevent="alert()" href="https://www.baidu.com">click me</a> -->
+<!-- 		双向数据绑定
+<h1>键盘 Events</h1>
+		<h1>双向数据绑定  / input / select / textaread</h1>
+		<label>姓名:	</label>
+		<input ref="name" type="text" v-model="name">
+		<span>{{name}}</span>
+		<label>年龄</label>
+		<input ref="age" type="text" v-model="age">
+		<span>{{ age}}</span> -->
+
+		<!-- 计算属性 computed -->
+		<h1>Computed 计算属性</h1>
+		<!-- <button v-on:click="a++">Add to A</button>
+		<button v-on:click="b++">Add to B</button>
+		<p>A - {{ a }}</p>
+		<p>B - {{ b }}</p>
+		<p> Age + A == {{ addToA }}</p>
+		<p> Age + B == {{ addToB }}</p> -->
+		<h1 >动态  CSS  class</h1>
+
+		<h2 > 实例  1</h2>
+	<!-- 	<div v-on:click="changeColor = !changeColor " v-bind:class="{changeColor,changeColor}">
+			<span>Hnery</span>
+		</div>
+ -->
+<!-- 		<h2> 实例  2</h2>
+		<button v-on:click="changeColor = !changeColor">Change color</button>
+		<button v-on:click="changeLength = !changeLength">change Length</button>
+		<div v-bind:class="compClasses">
+			<span>
+				Hnery
+			</span>
+		</div>
+ -->
+
+ 	<h1>v-if 条件</h1>
+<!--  
+ 	<button v-on:click="error = !error">Toggle Error</button>
+
+ 	<button  v-on:click="success = !success" >Toggle  Success</button>
+
+	<p v-if="error">网络连接错误 ： 404</p>
+ 	<p v-else-if="success">成功啦```````````200</p> -->
+ <!-- 	v-if与v-show的区别是：一个不显示时，dom树种没有，
+ 	一个知识隐藏起来了，dom树中数据还在
+	<p v-show="error">网络连接错误 ： 404</p>
+ 	<p v-show="success">成功啦```````````200</p> -->
+ 	<h1>v -for 循环</h1>
+ 	<!-- s数组下标获取 -->
+<!--  	{{characters[0]}}
+ 	{{characters[1]}}
+ 	{{characters[2]}} -->
+
+<!-- 数组便利 -->
+<!-- 	<ul>
+		<li v-for="character in characters"> {{character}}</li>
+	</ul>
+	<ul>
+		<li v-for="(user,index) in users">
+		{{index +1 }} . 	{{user.name}} --{{user.age}}
+		</li>
+	</ul>
+	<template v-for="(user,index) in users">
+		<h3> {{index }} . {{ user.name}}</h3>
+		<p>Age - {{user.age}}</p>
+
+	</template>
+
+		<template v-for="(user,index) in users">
+			<div v-for="(val,key) in user"></div>
+				<p> {{ val }}   --- {{ key }} </p>
+		</template>
+-->
+
+<!-- 图片 -->
+<!-- 		<div id="bag" v-bind:class="{burst:ended}"></div>
+ -->
+		<!-- 进度情况 -->
+		<!-- <div id="bag-health">
+			<div v-bind:style="{width:health + '%'}"></div>
+		</div> -->
+		<!-- 强制按钮 -->
+		<!-- <div id="controls">
+			<button v-on:click="punch" v-show="!ended">使劲敲</button>
+			<button v-on:click="restart">重新开始</button>
+		</div> -->
+
+<!-- 			<h1>初始化多个vue实例对象</h1>
+ --><!-- 
+		<h2>{{title}}</h2>
+		<p>{{greet}}</p>
+		
+	</div> 
+		<div id="vue-app-two">
+			<h2>{{title}}</h2>
+			<p>{{greet}}</p>
+			<button v-on:click="changeTitle"> changeTitle  One</button>
+		</div> -->
+
+
+		<greet></greet>
+	</div>
+	<div id="vue-app-two">
+		<greet></greet>
+
+	</div>
+	<script  src="app.js" ></script>
+
+</body>
+</html>
